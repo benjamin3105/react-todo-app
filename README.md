@@ -1,3 +1,7 @@
+# React Todo App
+
+You need to start somewhere right? Don't try to create a Facebook lookalike on the first try learning a new language. Start with basic functions and work from there. 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
