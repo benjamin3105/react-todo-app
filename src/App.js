@@ -1,5 +1,5 @@
 import './App.css';
-import React, {useState, useRefs, useRef, useEffect} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import Header from './components/Header';
 import TodoList from './components/TodoList';
 import { v4 as uuidv4 } from 'uuid'
