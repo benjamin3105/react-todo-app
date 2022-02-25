@@ -5,12 +5,12 @@ export default function Todo({todo, toggleTodo, id, removeTodo}) {
         toggleTodo(todo.id)
     }
     return (
-        <li>
+        <li className="br-3 todo">
             <label style={{ textDecoration: todo.complete ? "line-through" : "" }} >
-                <input type="checkbox" checked={todo.complete} onChange={handleTodoClick} />
+                <input className="checkbox-todo" type="checkbox" checked={todo.complete} onChange={handleTodoClick} />
                 {todo.name}
             </label>
-            <button onClick={() => removeTodo(id)}>X</button>
+            <button className="br-3 remove-todo" onClick={() => removeTodo(id)}>X</button>
         </li>
     )
 }

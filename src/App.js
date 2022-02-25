@@ -45,22 +45,22 @@ function App() {
     setTodos(newTodos)
   }
 
-  function removeTodo() {
-
+  const removeTodo = id => {
+    const newTodos = [...todos]
+    newTodos.splice(id, 1)
+    setTodos(newTodos)
   }
 
   return (
     <div className="App">
       <Header />
+      <div className="br-3 left-todo"><strong>{todos.filter(todo => !todo.complete).length}</strong> left to do</div>
       <TodoList todos={todos} toggleTodo={toggleTodo} removeTodo={removeTodo} />
-
-      <input 
-      type="text"
-      ref={todoNameRef} />
-      <button onClick={handleAddTodo}>Add todo</button>
-      <button onClick={handleClearComplete}>Clear Complete</button>
-      <button onClick={handleDeleteTodo}>Delete all todos</button>
-      {todos.filter(todo => !todo.complete).length} left to do
+      <input className="br-3 input-todo" type="text" ref={todoNameRef} placeholder="My todo..." />
+      <button className="br-3 button add-todo" onClick={handleAddTodo}>Add todo</button>
+      <button className="br-3 button complete-todo" onClick={handleClearComplete}>Clear Complete</button>
+      <button className="br-3 button delete-todo" onClick={handleDeleteTodo}>Delete all todos</button>
+      
     </div>
   )
 }
